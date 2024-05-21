@@ -1,8 +1,10 @@
 // place files you want to import through the `$lib` alias in this folder.
+import { PUBLIC_API_HOST } from '$env/static/public';
+
 import { goto } from "$app/navigation";
 import { getCookie, setCookie, eraseCookie } from "./util/cookies";
 
-const base = "http://localhost:8080";
+const base = `http://${PUBLIC_API_HOST}`;
 const tokenCookieName = "online-queue-token";
 
 export function logoutQuery() {
